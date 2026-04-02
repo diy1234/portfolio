@@ -1,0 +1,67 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --neon:  #00d4ff;
+  --neon2: #7c3aed;
+  --neon3: #10b981;
+}
+
+/* Dark mode (default) */
+:root[data-theme='dark'],
+:root:not([data-theme]) {
+  --bg-primary: #020617;
+  --bg-secondary: #0f172a;
+  --bg-tertiary: #1e293b;
+  --text-primary: #e2e8f0;
+  --text-secondary: #94a3b8;
+  --border-light: rgba(255, 255, 255, 0.1);
+  --border-medium: rgba(0, 212, 255, 0.2);
+}
+
+/* Light mode */
+:root[data-theme='light'] {
+  --bg-primary: #f8fafc;
+  --bg-secondary: #f1f5f9;
+  --bg-tertiary: #e2e8f0;
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --border-light: rgba(15, 23, 42, 0.1);
+  --border-medium: rgba(0, 212, 255, 0.3);
+}
+
+body {
+  font-family: 'Syne', sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+/* Smooth scrolling inside main */
+main { scroll-behavior: smooth; }
+
+/* Scrollbar */
+::-webkit-scrollbar        { width: 4px; }
+::-webkit-scrollbar-track  { background: transparent; }
+::-webkit-scrollbar-thumb  { 
+  background: var(--bg-tertiary);
+  border-radius: 2px; 
+}
+
+/* Neon text gradient */
+.neon-text {
+  background: linear-gradient(135deg, #fff 0%, #00d4ff 55%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+canvas { display: block; }
+
+/* Transitions for theme changes */
+* {
+  transition-property: background-color, color;
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+}
