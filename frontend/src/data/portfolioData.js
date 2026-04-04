@@ -6,7 +6,7 @@ export const PERSONAL = {
   email:   'jaindia08@gmail.com',
   github:  'https://github.com/diy1234',
   linkedin:'https://linkedin.com/in/diya-jain-8a473320b',
-  avatar:  'A',
+  avatar:  'D',
 }
 
 export const EDUCATION = [
